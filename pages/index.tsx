@@ -45,7 +45,7 @@ const Home: NextPage<Props> = ({ date, time }) => {
                 <SignalBar height={4} />
               </div>
               <div className={styles.wifi}>
-                <Image src="/wifi.svg" width={12} height={12} />
+                <Image src="/wifi.svg" alt="Wifi" width={12} height={12} />
               </div>
               <div className={styles.battery}>
                 <div className={styles.batteryOutline}>
@@ -58,7 +58,12 @@ const Home: NextPage<Props> = ({ date, time }) => {
             <DateInfo date={date} time={time} />
             <div className={styles.shortcuts}>
               <div className={styles.shortcut}>
-                <Image src="/flash.svg" width={28} height={18} />
+                <Image
+                  src="/flash.svg"
+                  alt="Flashlight"
+                  width={28}
+                  height={18}
+                />
               </div>
               <div className={styles.shortcut}>
                 <div className={styles.cameraBody}>
@@ -82,12 +87,11 @@ const Home: NextPage<Props> = ({ date, time }) => {
 
 export const getServerSideProps = () => {
   const now = new Date();
-  const options = {
+  const date = now.toLocaleDateString("en-US", {
     weekday: "long",
     month: "long",
     day: "numeric",
-  };
-  const date = now.toLocaleDateString("en-US", options);
+  });
   const time = `${now.getHours()}:${
     now.getMinutes() < 10 ? `0${now.getMinutes()}` : now.getMinutes()
   }`;
