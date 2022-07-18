@@ -1,0 +1,114 @@
+.base {
+  width: var(--width);
+  height: var(--height);
+  background: var(--midnightGreen);
+  border-radius: 40px;
+  padding: 4px;
+  position: relative;
+  text-align: center;
+}
+
+.bezel {
+  position: absolute;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  padding: 8px;
+  background: #151515;
+  border-radius: 36px;
+}
+
+.mic {
+  width: 50px;
+  height: 4px;
+  background: #262626;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 10;
+}
+
+.notch {
+  width: 100px;
+  height: 26px;
+  background: #151515;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 8px 10px 8px;
+}
+
+.camera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1e1e1e;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+.lens {
+  width: 4px;
+  aspect-ratio: 1;
+  background: #2d2d3b;
+  border-radius: 100%;
+}
+
+.sensors {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+}
+
+.sensor {
+  width: 14px;
+  aspect-ratio: 1;
+  background: #171717;
+  border-radius: 100%;
+}
+
+.power {
+  position: absolute;
+  top: 175px;
+  right: -1.5px;
+  width: 1.5px;
+  height: 50px;
+  background: #4d4d4d;
+  border-radius: 2px;
+}
+
+.mute {
+  position: absolute;
+  top: 120px;
+  left: -1.5px;
+  width: 1.5px;
+  height: 20px;
+  background: #4d4d4d;
+  border-radius: 2px;
+}
+
+.volume {
+  position: absolute;
+  top: 160px;
+  left: -1.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.volumeSwitch {
+  width: 1.5px;
+  height: 40px;
+  background: #4d4d4d;
+  border-radius: 2px;
+}

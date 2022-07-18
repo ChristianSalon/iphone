@@ -1,0 +1,24 @@
+.icon {
+  padding: 4px;
+  flex: 1;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  position: relative;
+}
+
+.notifications {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 8px;
+  min-width: 14px;
+  height: 14px;
+  padding: 4px;
+  border-radius: 100%;
+}

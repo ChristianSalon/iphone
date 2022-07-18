@@ -1,0 +1,142 @@
+.homeScreen {
+  position: absolute;
+  z-index: 2;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  background: url("../public/wallpaper.jpg") no-repeat center;
+  background-size: cover;
+  border-radius: 34px;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 20px 6px 20px;
+}
+
+.statusBar {
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--lightText);
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+
+.navigation {
+  grid-area: nav;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0 -10px;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.grid {
+  width: 100%;
+  flex: 1;
+  display: grid;
+  gap: 14px;
+  grid-template-rows: repeat(6, calc(1fr - 14px)) 20px 60px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "widget-1 widget-1 widget-2 widget-2"
+    "widget-1 widget-1 widget-2 widget-2"
+    "icon-1 icon-2 icon-3 icon-4"
+    "icon-5 icon-6 icon-7 icon-8"
+    "icon-9 icon-10 icon-11 icon-12"
+    "icon-13 icon-14 icon-15 icon-16"
+    "pages pages pages pages"
+    "nav nav nav nav";
+}
+
+.pages {
+  grid-area: pages;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.page {
+  width: 4px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.activePage {
+  background: rgba(255, 255, 255, 1);
+}
+
+.widget1 {
+  grid-area: widget-1;
+}
+
+.widget2 {
+  grid-area: widget-2;
+}
+
+.icon1 {
+  grid-area: icon-1;
+}
+
+.icon2 {
+  grid-area: icon-2;
+}
+
+.icon3 {
+  grid-area: icon-3;
+}
+
+.icon4 {
+  grid-area: icon-4;
+}
+
+.icon5 {
+  grid-area: icon-5;
+}
+
+.icon6 {
+  grid-area: icon-6;
+}
+
+.icon7 {
+  grid-area: icon-7;
+}
+
+.icon8 {
+  grid-area: icon-8;
+}
+
+.icon9 {
+  grid-area: icon-9;
+}
+
+.icon10 {
+  grid-area: icon-10;
+}
+
+.icon11 {
+  grid-area: icon-11;
+}
+
+.icon12 {
+  grid-area: icon-12;
+}
+
+.icon13 {
+  grid-area: icon-13;
+}
+
+.icon14 {
+  grid-area: icon-14;
+}
+
+.icon15 {
+  grid-area: icon-15;
+}
+
+.icon16 {
+  grid-area: icon-16;
+}
