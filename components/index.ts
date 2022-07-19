@@ -7,6 +7,7 @@ import WeatherWidget from "./WeatherWidget";
 import CalendarWidget from "./CalendarWidget";
 import StatusBar from "./StatusBar";
 import NavigationItem from "./NavigationItem";
+import Navigation from "./Navigation";
 
 export {
   DateInfo,
@@ -18,4 +19,5 @@ export {
   CalendarWidget,
   StatusBar,
   NavigationItem,
+  Navigation,
 };

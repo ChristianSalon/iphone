@@ -8,20 +8,44 @@ interface Props {
   bgColor: string;
   appName: string;
   notifications?: number;
+  bgImage?: string;
 }
 
-const AppIcon: React.FC<Props> = ({ bgColor, appName, notifications }) => {
+const AppIcon: React.FC<Props> = ({
+  bgColor,
+  appName,
+  notifications,
+  bgImage,
+}) => {
   const { isLocked } = useAppState();
+
+  const variants = {
+    locked: { scale: 1, opacity: 1 },
+    unlocked: {
+      y: [50, 0],
+      opacity: [0, 1],
+      rotateX: [-90, -25, 0],
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
 
   return (
     <motion.div
       className={styles.wrapper}
-      animate={
-        isLocked ? undefined : { y: [50, 0], z: [10, 0], opacity: [0.4, 1] }
-      }
-      transition={{ duration: 0.5 }}
+      variants={variants}
+      animate={isLocked ? "locked" : "unlocked"}
     >
-      <div className={styles.icon} style={{ background: bgColor }}>
+      <div
+        className={styles.icon}
+        style={{
+          background: bgImage
+            ? `url("app-icons/${bgImage}.svg") no-repeat center`
+            : bgColor,
+          backgroundSize: "contain",
+        }}
+      >
         {notifications && (
           <div className={styles.notifications}>{notifications}</div>
         )}

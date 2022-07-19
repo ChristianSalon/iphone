@@ -1,11 +1,27 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import { useAppState } from "../hooks";
 import styles from "../styles/WeatherWidget.module.css";
 
 const WeatherWidget: React.FC = () => {
+  const { isLocked } = useAppState();
+
+  const variants = {
+    locked: { scale: 1, opacity: 1 },
+    unlocked: {
+      y: [50, 0],
+      opacity: [0.4, 1],
+      transition: { duration: 0.5 },
+    },
+  };
+
   return (
-    <motion.div className={styles.wrapper}>
+    <motion.div
+      className={styles.wrapper}
+      variants={variants}
+      animate={isLocked ? "locked" : "unlocked"}
+    >
       <div className={styles.widget}>
         <div className={styles.mainInfo}>
           <div className={styles.cityRow}>

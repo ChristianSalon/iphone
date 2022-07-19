@@ -14,7 +14,7 @@
   align-items: flex-start;
   text-align: left;
   padding: 8px 12px;
-  border-radius: 8px;
+  border-radius: 10px;
   background: linear-gradient(to bottom, #0073ed, #0dd7f2);
   margin-bottom: 4px;
 }

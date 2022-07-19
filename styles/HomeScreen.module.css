@@ -15,29 +15,18 @@
   padding: 0 5px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: var(--lightText);
   font-size: 10px;
   margin-bottom: 20px;
-}
-
-.navigation {
-  grid-area: nav;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 0 -10px;
-  border-radius: 20px;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 14px;
 }
 
 .grid {
   width: 100%;
   flex: 1;
   display: grid;
-  gap: 14px;
-  grid-template-rows: repeat(6, calc(1fr - 14px)) 20px 60px;
+  gap: 16px;
+  grid-template-rows: repeat(6, calc(1fr - 16px)) 20px 60px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
     "widget-1 widget-1 widget-2 widget-2"

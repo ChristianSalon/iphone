@@ -4,11 +4,10 @@
 }
 
 .icon {
-  padding: 4px;
   margin-bottom: 4px;
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 8px;
+  border-radius: 10px;
   position: relative;
 }
 
@@ -32,6 +31,6 @@
   font-size: 8px;
   min-width: 14px;
   height: 14px;
-  padding: 4px;
-  border-radius: 100%;
+  padding: 4px 2px;
+  border-radius: 45%;
 }

@@ -4,6 +4,7 @@ import styles from "../styles/HomeScreen.module.css";
 import {
   AppIcon,
   CalendarWidget,
+  Navigation,
   NavigationItem,
   StatusBar,
   WeatherWidget,
@@ -35,16 +36,20 @@ const HomeScreen: React.FC = () => {
           <WeatherWidget />
         </div>
         <div className={styles.icon1}>
-          <AppIcon bgColor={"lightgray"} appName={"Maps"} />
+          <AppIcon bgColor={"lightgray"} appName={"Maps"} bgImage={"maps"} />
         </div>
         <div className={styles.icon2}>
           <AppIcon bgColor={"#E50914"} appName={"Netflix"} />
         </div>
         <div className={styles.icon3}>
-          <AppIcon bgColor={"#FFD52E"} appName={"Notes"} />
+          <AppIcon bgColor={"#FFD52E"} appName={"Notes"} bgImage={"notes"} />
         </div>
         <div className={styles.icon4}>
-          <AppIcon bgColor={"#007AFF"} appName={"App Store"} />
+          <AppIcon
+            bgColor={"#007AFF"}
+            appName={"App Store"}
+            bgImage={"app-store"}
+          />
         </div>
         <div className={styles.icon5}>
           <AppIcon bgColor={"#7360f2"} appName={"Viber"} notifications={34} />
@@ -75,33 +80,45 @@ const HomeScreen: React.FC = () => {
           <AppIcon bgColor={"red"} appName={"YouTube"} />
         </div>
         <div className={styles.icon11}>
-          <AppIcon bgColor={"#555555"} appName={"Settings"} />
+          <AppIcon
+            bgColor={"#555555"}
+            appName={"Settings"}
+            bgImage={"settings"}
+          />
         </div>
         <div className={styles.icon12}>
-          <AppIcon bgColor={"#34da4f"} appName={"FaceTime"} />
+          <AppIcon
+            bgColor={"#34da4f"}
+            appName={"FaceTime"}
+            bgImage={"facetime"}
+          />
         </div>
         <div className={styles.icon13}>
-          <AppIcon bgColor={"white"} appName={"Calendar"} notifications={3} />
+          <AppIcon
+            bgColor={"white"}
+            appName={"Calendar"}
+            notifications={3}
+            bgImage={"calendar"}
+          />
         </div>
         <div className={styles.icon14}>
-          <AppIcon bgColor={"#111111"} appName={"Clock"} />
+          <AppIcon bgColor={"#111111"} appName={"Clock"} bgImage={"clock"} />
         </div>
         <div className={styles.icon15}>
-          <AppIcon bgColor={"#e68600"} appName={"Books"} />
+          <AppIcon bgColor={"#e68600"} appName={"Books"} bgImage={"books"} />
         </div>
         <div className={styles.icon16}>
-          <AppIcon bgColor={"#B150E2"} appName={"Podcasts"} />
+          <AppIcon
+            bgColor={"#B150E2"}
+            appName={"Podcasts"}
+            bgImage={"podcasts"}
+          />
         </div>
         <div className={styles.pages}>
           <div className={`${styles.page} ${styles.activePage}`}></div>
           <div className={styles.page}></div>
         </div>
-        <div className={styles.navigation}>
-          <NavigationItem bgColor={"#34da4f"} />
-          <NavigationItem bgColor={"#006cff "} />
-          <NavigationItem bgColor={"#34da4f"} notifications={24} />
-          <NavigationItem bgColor={"#fc3c44"} />
-        </div>
+        <Navigation />
       </div>
     </motion.div>
   );
